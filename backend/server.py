@@ -10,6 +10,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 CORS(app, origins='http://localhost:3000',supports_credentials=True)
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['JWT_EXPIRATION_DELTA'] = 10
 
 api = Api(app)
 
